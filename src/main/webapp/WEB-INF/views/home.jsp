@@ -20,7 +20,7 @@
 		function convert() {
 			//	alert($(JSON.stringify($("#dataform").serializeObject())));
 			$.ajax({
-				url : "convert",
+				url : "convert_url",
 				type : "POST",
 				dataType : 'JSON',
 				contentType : 'application/json',
@@ -86,7 +86,8 @@
 					}
 					data = JSON.stringify(data);
 					console.log(data);
-					$http.post('convert', data).success(function(data, status) {
+					/* following request has two parameter one is url to controller and another is data */
+					$http.post('convert_url', data).success(function(data, status) {
 						$scope.amount2 = data;
 					})
 				}
@@ -153,7 +154,6 @@
 				ng-options="v for v in currency2.values"></select> <input id=""
 				type="text" name="toAmt" placeholder="Enter Amount"
 				ng-model="amount2" />
-
 		</div>
 	</div>
 </body>
