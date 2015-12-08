@@ -9,6 +9,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.js">
 	
 </script>
+<!-- This is using jquery -->
 <script type="text/javascript">
 	$(function() {
 		//alert("on load");
@@ -50,6 +51,7 @@
 	})
 </script>
 
+<!-- this is using angular js -->
 <script type="text/javascript">
 	var myApp1 = angular.module('myApp', []);
 
